@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  div.backg
+    h1= "Eyva holding - náborový formulář"
+    p Vážený pane/paní,
+    P Děkujeme za váš zájem o účast na mimozemské misi Pandora. Pro potvrzení vašeho zájmu prosím vyplntě formulář níže.
+    div.form-center
+      form(method="POST", "/")
+        div
+          div.form-block Jméno
+          input(type="text" name="name" required)
+          div.form-block Příjmení
+          input(type="text" name="surname" required)
+          div.form-block Výška v cm
+          input(type="number" name="výška" required)
+          div.form-block Velikost nohy
+          input(type="number" name="velikost_haksny" required)
+          div.form-block Oblíbené jídlo
+          input(type="text" name="jidlo" required)
+          div.form-block Oblíbený sport
+          input(type="text" name="sport" required)
+
+        div.send-button
+          button(type="submit") Odeslat údaje
